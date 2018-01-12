@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calculating element dimensions</title>
+
+<style>
+aside, article, section, header, footer, nav {
+	display: block;
+}
+div, p {
+	margin: 0;
+	padding:0;
+}
+html {
+	background: #ccc;
+}
+.outer {
+	width: 600px;
+	margin: 0 auto;
+	background: #9CF;
+}
+/* set the class box properties here */
+.box{
+	background: #B7D19C;
+	/* 1. set width to 300 px , half of class outer(600px) */
+	width: 300px;
+	/* 2. set the padding to all direction- top right bottom left to 50 px */
+	padding: 50px; 
+	/* 3. set border to all direction 2px */
+	border:2px solid black;
+	/* so now class box full size is 300px + (50px +50px)padding + (2px +2px)border = 404 px */
+	/* 4. set the margin-left to 50px */
+	margin-left:50px;
+	/* here actual width of element hasn't changed, but amount of space it takes up has changed. we are pushing the element away 50px from the edgeof its containing element.  so the amount of space it needs within layout to do this are now 454px , so 404px for the total width of element and 50px over here on left side. 
+
+	you have containing block and content block 
+	content block - paddding,  border and width of element 404 px 
+	containing block - are margin edges 454 px */
+}
+p {
+	background: #FF9;
+	/*height: 100%; */
+}
+	
+
+</style>
+</head>
+<body>
+<div class="outer">
+<div class="box">
+<p>Here we'll need to calculate the width of this interior div element. This may seem simple at first, but as we begin to add box model properties, and as the overall width of the parent element and the div conflict with one another, we'll need to understand how each of the properties combine to effect the overall width (and height) of page elements.
+</p>
+</div>
+</div>
+</body>
+</html>
