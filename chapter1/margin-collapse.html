@@ -3,9 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>vertical margin collapse</title>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <style>
 aside, article, section, header, footer, nav {
 	display: block;
@@ -31,7 +28,7 @@ p {
 	line-height:20px;
 	/* 1. Add margin to top and bottom to paragraph*/
 	margin:10px 0;
-	/*2. Add margin top to 20 px so that mamrgin will replace with 10px*/
+	/*2. Add margin top to 20 px so that margin will replace with 20px*/
 	margin-top:20px;
 	
 }
@@ -40,11 +37,13 @@ div {
 	/* 3. Now come to div tag , add margin to top and bottom  10 pixels */
 	margin-top: 10px 0;
 	border: 1px solid black;
+	/* or set padding:1px 0;
 }
 </style>
 </head>
 <body>
 <article>
+
 <h1>Vertical margin collapse</h1>
 <!-- here 2 paragraph tab with div and 2 without div -->
 <p>When two block-level elements are stacked on top of one another in normal document flow, their margins collapse. If the top and bottom margins of the two elements are equal in value, that value is used. If not, the greater of the two values is used to define the space between the elements.</p>
@@ -55,5 +54,8 @@ div {
 <div>
 <p>This means that if you set a top margin on a heading or paragraph inside a container element to hold it away from the top edge of the container, you're not guarenteed that you'll get the results you're after unless you account for margin collapse.</p>
 </div>
+
+<h5> 1. First in paragragh tab, we applied the margin to both the top and bottom of our paragraphs, so that bottom of the paragraph have 10 pixels and top of this one should have 10 pixels. and if our vertical margins didn't collapse, we would have total of 20 pixels worth of space there, but you can see , we only have 10. so we have vertical margin collapse. you are getting 10 pixels worthof space between two of them and that presents sort of double spacing our paragraphs. </h5>
+	<h5> 2. If you need that spacing, you need to make sure that something is interrupting those margins from touching each other. It could be border or it could be padding. </h5>
 </body>
 </html>
