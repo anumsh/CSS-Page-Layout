@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>normal document flow</title>
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 <style>
+/* browser that doesn't support the never HTML5 elements how those only should
+be displayed and the fact we want them treated as if they are block level
+elements */
 aside, article, section, header, footer, nav {
 	display: block;
 }
+/* here we are stripping off default margins and padding 
+for just a serious of elements , div tags, heading, paragraghs and image.
+this is something called CSS-reset.  */
 div, h1, h2, h3, p, img {
 	margin: 0;
 	padding: 0;
@@ -23,6 +26,10 @@ body {
 	padding: 0 0 25px;
 	font: 100% Georgia, Times, serif;
 	background: rgb(255, 255, 255);
+	/* 1. set the body width  */
+	width:900px;
+	/* set the margin to left and right */
+	margin:0 auto;
 }
 header {
 	
