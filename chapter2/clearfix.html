@@ -43,12 +43,14 @@ section {
 	background: rgb(255, 231, 181);
 	float: left;
 }
-/*   */
+/*  it generate the content at the top of element and at the bottom of element */
 .clearfix:before,
 .clearfix:after {
 	content:"";
-	display: table;
-	clear:both;
+	display: table;  /* it generate empty table cell which will prevent any collapse of margins from happening */
+}
+.clearfix:after {
+	clear:both; /* one of the bottom is being cleared */
 }
 </style>
 
