@@ -32,6 +32,8 @@ section {
 	background: rgb(178,155,107);
 	border: 1px solid black;
 	padding: 10px;
+	/* 2nd way floated elements contain inside the section area  */
+	overflow: hidden;
 }
 .one {
 	background: rgb(207, 255, 245);
@@ -49,11 +51,11 @@ section {
 	*/
 	float:left;
 }
-/* 2. clear the side to both   */
+/* 2. clear the side to both  (one way to contain float elements in section ) 
 p{
 	clear:both;
 }
-	
+*/	
 </style>
 </head>
 <body>
@@ -61,8 +63,8 @@ p{
 <div class="one">One</div>
 <div class="two">Two</div>
 <div class="three">Three</div>
-<!-- 2. make a new paragragh tag   -->
-<p> Clearing floats help to contain them</p>
+<!-- 2. make a new paragragh tag   
+<p> Clearing floats help to contain them</p>   -->
 </section>
 </body>
 </html>
